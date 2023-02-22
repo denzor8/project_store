@@ -1,11 +1,15 @@
-import React from "react";
+import React from 'react';
+import MainRoutes from './MainRoutes';
+import Navbar from './components/Navbar/Navbar';
+import AuthContextProvider from './contexts/AuthContextProvider';
 
-function App() {
+const App = () => {
   return (
-    < >
-    app  
-    </>
-  );
+      <AuthContextProvider>
+        <Navbar />
+        <MainRoutes />
+      </AuthContextProvider>
+  )
 }
 
-export default App;
+export default App

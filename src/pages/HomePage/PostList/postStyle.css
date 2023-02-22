@@ -1,0 +1,14 @@
+.posts-list{
+	width: 90%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}

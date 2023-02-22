@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import RegistrationPage from './pages/RegistrationPage';
 import LoginPage from './pages/LoginPage';
 import NotFoundPage from './pages/NotFoundPage';
-import HomePage from './pages/HomePage';
+import PostList from './pages/HomePage/PostList/PostList';
 
 const MainRoutes = () => {
     const PUBLIC_ROUTES = [
@@ -19,7 +19,7 @@ const MainRoutes = () => {
         },
         {
             link: '/',
-            element: <HomePage />,
+            element: <PostList />,
             id: 3
         },
         {

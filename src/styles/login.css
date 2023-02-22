@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	color: white;
+}
+.box-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.box {
+	position: relative;
+	width: 380px;
+	height: 420px;
+	background: #1c1c1c;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.box:before {
+	content: "";
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+	transform-origin: bottom right;
+	animation: animate 6s linear infinite;
+}
+
+.box:after {
+	content: "";
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+	transform-origin: bottom right;
+	animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
+@keyframes animate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.form {
+	position: absolute;
+	inset: 2px;
+	background: #28292d;
+	border-radius: 8px;
+	z-index: 10;
+	padding: 50px 40px;
+	display: flex;
+	flex-direction: column;
+}
+.form > h2 {
+	color: #45f3ff;
+	font-weight: 400;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+.inputBox {
+	position: relative;
+	margin-bottom: 15px;
+	margin-top: 10%;
+	color: #45f3ff;
+	height: 45px;
+}
+.inputBox > i {
+	position: absolute;
+	width: 48x;
+	height: 100%;
+	color: #fff;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inputBox > input {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	background: none;
+	outline: none;
+	resize: none;
+	border: 0;
+	font-family: "Montserrat", sans-serif;
+	font-size: 17px;
+	transition: all 0.3s;
+	border-bottom: 1.8px solid #fff;
+	color: #fff;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+a:hover {
+	text-decoration: underline;
+}
+p {
+	float: left;
+}
+.loginButton {
+	color: black;
+	font-size: 18px;
+
+	border-radius: 10px;
+	margin-bottom: 10px;
+	width: 100px;
+}
+.loginButton:hover {
+	cursor: pointer;
+	background: #45f3ff;
+}

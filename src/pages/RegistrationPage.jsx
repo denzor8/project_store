@@ -33,7 +33,7 @@ const RegistrationPage = () => {
             </div>
 
             <a href="#"> Forgot Password</a>
-            <button className='loginButton' onClick={() => register(username, password)}>Login</button>
+            <button className='loginButton' onClick={() => register(username, password)}>Register</button>
           </div>
         </div>
       </div>

@@ -1,20 +1,24 @@
 import React from 'react';
 import MainRoutes from './MainRoutes';
 import Navbar from './components/Navbar/Navbar';
-// import Pagination from './components/Pagination/Pagination';
-import AuthContextProvider from './contexts/AuthContextProvider';
 import PostList from './pages/HomePage/PostList/PostList';
 import { PostContextProvider } from './contexts/postsContext';
+import AuthContextProvider from './contexts/AuthContextProvider';
+import ProductContextProvider from './contexts/ProductContextProvider';
+// import Pagination from './components/Pagination/Pagination';
 
 
 const App = () => {
   return (
-    <AuthContextProvider>
-      <PostContextProvider>
-        <Navbar />
-        <MainRoutes />
-      </PostContextProvider>
-    </AuthContextProvider>
+    <ProductContextProvider>
+      <AuthContextProvider>
+        <PostContextProvider>
+          <Navbar />
+          <MainRoutes />
+          {/* <Pagination /> */}
+        </PostContextProvider>
+      </AuthContextProvider>
+    </ProductContextProvider>
   )
 }
 

@@ -4,24 +4,24 @@ import CardContent from '@mui/material/CardContent';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import Post from './Post.css';
+import './ProductCard.css'
 // import Pagination from '../../../components/Pagination/Pagination'
 
-export default function ActionAreaCard({ card }) {
+export default function ActionAreaCard({ item }) {
 	return (
 		<>
 			<Card sx={{ maxWidth: 200 }} className='postCard'>
 				<CardActionArea>
 					<Paper variant="outlined" className='post-card'>
-						<img src={card.picture} />
+						<img src={item.picture} />
 					</Paper>
 					<CardContent>
 						<Typography variant="body2" color="text.secondary">
-							Name: {card.name}
+							Name: {item.name}
 							<br />
-							Price: {card.price}$
+							Price: {item.price}$
 							<br />
-							Category: {card.type}
+							Category: {item.type}
 						</Typography>
 					</CardContent>
 				</CardActionArea>

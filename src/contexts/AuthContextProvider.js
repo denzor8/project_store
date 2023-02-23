@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const authContext = React.createContext();
 export const useAuth = () => useContext(authContext);
@@ -27,7 +27,7 @@ const AuthContextProvider = ({ children }) => {
             console.log(res);
             setError('');
             navigate('/login');
-        } catch(e) {
+        } catch (e) {
             console.log(e);
             setError('Error occured!');
         };
@@ -46,23 +46,58 @@ const AuthContextProvider = ({ children }) => {
             localStorage.setItem('username', username);
             setUser(username);
             setError('');
-        } catch(e) {
+        } catch (e) {
             console.log(e);
             setError('Wrong username or password!');
         };
     };
- 
-  return (
-    <authContext.Provider value={{
+
+    const logout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('username');
+        setUser('');
+        navigate('/');
+    }
+
+    const checkAuth = async () => {
+        console.log("Work")
+        let token = JSON.parse(localStorage.getItem('token'));
+
+        try {
+            const Authorization = `Bearer ${token.access}`;
+            let res = await axios.post(
+                `${API}api/token/refresh/`,
+                { refresh: token.refresh },
+                { headers: { Authorization } },
+            );
+            console.log(res)
+            localStorage.setItem('token', JSON.stringify({
+                refresh: token.refresh,
+                access: res.data.access
+            }));
+
+            let username = localStorage.getItem('username');
+            setUser(username);
+        } catch (e) {
+            console.log(e);
+            logout();
+        };
+    }
+
+    const values = {
         user,
         error,
 
         register,
-        login
-    }}>
-        { children }
-    </authContext.Provider>
-  );
+        login,
+        logout,
+        checkAuth
+    }
+    return (
+        <authContext.Provider value={values}>
+            {children}
+        </authContext.Provider>
+    );
 };
 
 export default AuthContextProvider;

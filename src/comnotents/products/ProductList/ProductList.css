@@ -1,0 +1,16 @@
+.description {
+  height: 60px;
+  overflow: hidden;
+}
+.posts-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}

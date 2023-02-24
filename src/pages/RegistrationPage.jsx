@@ -1,44 +1,47 @@
-import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContextProvider';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import '../styles/login.css'
+import React, { useState } from "react";
+import { useAuth } from "../contexts/AuthContextProvider";
 
 const RegistrationPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const { register, error } = useAuth();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    register(username, password);
+  };
+
   return (
-    <div>
-      {/* <h2>Login User</h2> */}
-      {error ? (
-        <h3>{error}</h3>
-      ) : (
-        ''
-      )}
-      <div className='box-body'>
-        <div className="box">
-          <div className="form">
-            <h2>Register</h2>
-            <div className="inputBox">
-              <FontAwesomeIcon icon={faUser} />
-              <input type="text" placeholder="Username" required onChange={e => setUsername(e.target.value)} />
-            </div>
-
-            <div className="inputBox">
-              <FontAwesomeIcon icon={faLock} />
-              <input type="password" placeholder="Password" required onChange={e => setPassword(e.target.value)} />
-            </div>
-
-            <a href="#"> Forgot Password</a>
-            <button className='loginButton' onClick={() => register(username, password)}>Register</button>
-          </div>
+    <div className="login-box">
+      <h2>Register</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="user-box">
+          <input
+            type="text"
+            placeholder="Username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label>Username</label>
         </div>
-      </div>
+        <div className="user-box">
+          <input
+            type="text"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <label>Password</label>
+        </div>
+        <button onClick={() => register(username, password)}>
+          Register
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default RegistrationPage
+export default RegistrationPage;

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import EditProduct from "../comnotents/products/EditProduct/EditProduct";
 
 const EditProductPage = () => {
-	return (
-		<div>EditProductPage</div>
-	)
-}
+  return (
+    <>
+      <EditProduct />
+    </>
+  );
+};
 
-export default EditProductPage
+export default EditProductPage;

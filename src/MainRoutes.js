@@ -8,6 +8,7 @@ import AdminPage from "./pages/AdminPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import EditProductPage from "./pages/EditProductPage";
+import CartPage from './pages/CartPage';
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -50,6 +51,11 @@ const MainRoutes = () => {
       link: "/edit/:id",
       element: <EditProductPage />,
       id: 8,
+    },
+    {
+      link: "/cart",
+      element: <CartPage />,
+      id: 9,
     },
   ];
 

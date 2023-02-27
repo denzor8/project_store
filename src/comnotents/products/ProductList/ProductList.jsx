@@ -4,9 +4,8 @@ import "./ProductList.css";
 import ProductCard from "../ProductCard/ProductCard";
 import Pagination from "@mui/material/Pagination/";
 
-const ProductList = () => {
+const ProductList = ({ changeSideBarStatus, page, setPage }) => {
   const { products, getProducts } = useProducts();
-  const [page, setPage] = useState(1);
 
   useEffect(() => {
     getProducts();
@@ -25,8 +24,9 @@ const ProductList = () => {
     return products.slice(begin, end);
   }
   return (
-    <>
+    <div>
       <h3 style={{ textAlign: "center" }}>Products List</h3>
+      <button onClick={changeSideBarStatus}> Filter&Search Menu</button>
       <div className="posts-list">
 
         {products ? (
@@ -37,8 +37,8 @@ const ProductList = () => {
           <h3>Loading...</h3>
         )}
       </div>
-        <Pagination className="pagination" count={count} page={page} onChange={handlePage} />
-    </>
+      <Pagination className="pagination" count={count} page={page} onChange={handlePage} />
+    </div>
   );
 };
 

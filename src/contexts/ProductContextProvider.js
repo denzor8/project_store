@@ -29,7 +29,7 @@ const ProductContextProvider = ({ children }) => {
   const location = useLocation();
 
   const getProducts = async () => {
-    const { data } = await axios(`${JSON_API_PRODUCTS}`);
+    const { data } = await axios(`${JSON_API_PRODUCTS}/${window.location.search}`);
     dispatch({
       type: ACTIONS.GET_PRODUCTS,
       payload: data,
@@ -62,6 +62,22 @@ const ProductContextProvider = ({ children }) => {
     await axios.delete(`${JSON_API_PRODUCTS}/${id}`)
     getProducts();
   }
+  //search for products
+  const fetchByParams = (query, value) => {
+    const search = new URLSearchParams(location.search);
+
+
+    if (value==='all') {
+      search.delete(query);
+    } else {
+      search.set(query, value);
+    }
+
+    const url = `${location.pathname}?${search.toString()}`;
+
+    navigate(url);
+
+  };
 
   const values = {
     products: state.products,
@@ -72,6 +88,7 @@ const ProductContextProvider = ({ children }) => {
     getProductDetails,
     saveEditedProduct,
     deleteProduct,
+    fetchByParams,
   };
 
   return (

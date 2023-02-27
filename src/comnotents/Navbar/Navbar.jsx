@@ -27,6 +27,10 @@ const pages = [
     type: "Admin",
     path: "/admin",
   },
+  {
+    type: "Cart",
+    path: "/cart",
+  },
 ];
 const settings = [
   {

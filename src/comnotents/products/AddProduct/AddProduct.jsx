@@ -34,13 +34,6 @@ const AddProduct = () => {
   };
 
   return (
-    <Parallax
-      bgImage="https://png.pngtree.com/thumb_back/fh260/background/20210809/pngtree-background-biru-keren-dan-kosong-abstract-untuk-template-desain-ppt-image_759974.jpg"
-      bgImageAlt="background image"
-      strength={150}
-      blur={1}
-      style={{ height: "92vh" }}
-    >
       <div className="container">
         <form id="contact" action="" method="post">
           <h3>Add Product</h3>
@@ -109,7 +102,6 @@ const AddProduct = () => {
           </fieldset>
         </form>
       </div>
-    </Parallax>
   );
 };
 

@@ -1,7 +1,7 @@
 .productsPage {
   display: flex;
-  background-image: url("https://img.itch.zone/aW1nLzQ4NzU2MzQucG5n/315x250%23c/4Ti0%2BG.png");
-  background-attachment: fixed;
+  /* background-image: url("https://img.itch.zone/aW1nLzQ4NzU2MzQucG5n/315x250%23c/4Ti0%2BG.png"); */
+  /* background-attachment: fixed; */
 }
 .pagination2 {
   color: white;

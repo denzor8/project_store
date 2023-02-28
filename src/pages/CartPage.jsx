@@ -1,14 +1,13 @@
-import React from 'react'
-import Cart from '../comnotents/Cart/Cart'
-
+import React from "react";
+import Cart from "../comnotents/Cart/Cart";
 
 const CartPage = () => {
-	return (
-		<div>
-			<h3>CartPage</h3>
-			<Cart />
-		</div>
-	)
-}
+  return (
+    <div>
+      <h3>Cart Page</h3>
+      <Cart />
+    </div>
+  );
+};
 
-export default CartPage
+export default CartPage;

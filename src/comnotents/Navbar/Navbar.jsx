@@ -11,12 +11,14 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-// import AppleIcon from "@mui/icons-material/Apple";
 import gullIcon from "../../icons/chaika.png";
 //! custom
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
+import Badge from "@mui/material/Badge";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { useCart } from "../../contexts/CartContextProvider";
 
 const pages = [
   {
@@ -26,10 +28,6 @@ const pages = [
   {
     type: "Admin",
     path: "/admin",
-  },
-  {
-    type: "Cart",
-    path: "/cart",
   },
 ];
 const settings = [
@@ -65,6 +63,7 @@ function ResponsiveAppBar() {
   //! custom
   const navigate = useNavigate();
   const { logout, user, checkAuth } = useAuth();
+  const { cartLength } = useCart();
 
   React.useEffect(() => {
     if (localStorage.getItem("token")) {
@@ -72,7 +71,7 @@ function ResponsiveAppBar() {
     }
   }, []);
 
-  //* dark theme
+  //! dark theme
   const darkTheme = createTheme({
     palette: {
       mode: "dark",
@@ -152,10 +151,6 @@ function ResponsiveAppBar() {
                 ))}
               </Menu>
             </Box>
-            {/* <img
-              src={gullIcon}
-              sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-            /> */}
             <Typography
               variant="h5"
               noWrap
@@ -172,7 +167,7 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              Seagull
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
@@ -186,6 +181,15 @@ function ResponsiveAppBar() {
                   {page.type}
                 </Button>
               ))}
+              <IconButton
+                size="large"
+                color="inherit"
+                onClick={() => navigate("/cart")}
+              >
+                <Badge badgeContent={cartLength} color="error">
+                  <ShoppingCartOutlinedIcon />
+                </Badge>
+              </IconButton>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>

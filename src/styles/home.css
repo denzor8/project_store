@@ -1,3 +1,228 @@
-* {
-  color: white;
+.slide-KHU {
+  background-color: #f1eeea;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/006/543/731/original/3d-blue-and-gold-lines-in-paper-cut-style-free-vector.jpg");
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  height: 87.4rem;
+  overflow: hidden;
+  padding: 12.604rem 16.074rem 14.983rem 16.074rem;
+  position: relative;
+  width: 100%;
+}
+.main-JQJ {
+  background-color: #f9f7f6;
+  border: solid 0.5947rem #ffffff;
+  border-radius: 1.5293rem;
+  box-shadow: 0.3398rem 0.3398rem 4.1631rem rgba(0, 0, 0, 0.1000000015);
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.vector-1-ULi {
+  border-radius: 6.7119rem;
+  height: 35.8333rem;
+  left: 14.5265rem;
+  object-fit: contain;
+  position: absolute;
+  top: 15.4641rem;
+  vertical-align: top;
+  width: 56.5127rem;
+}
+.rdba905ae-f720-417b-98d1-dd360212d2f3720x-1-viW {
+  height: 52.8351rem;
+  left: 15.8081rem;
+  object-fit: cover;
+  position: absolute;
+  top: 8.0539rem;
+  vertical-align: top;
+  width: 52.8351rem;
+}
+.frame-1-QNn {
+  height: 5.3868rem;
+  left: 3.7383rem;
+  object-fit: contain;
+  position: absolute;
+  top: 3.3984rem;
+  vertical-align: top;
+  width: 8.8227rem;
+}
+.tech-vrv {
+  font-family: Inter, "Source Sans Pro";
+  font-size: 8.1563rem;
+  font-weight: 700;
+  height: 9.9rem;
+  left: 57.924rem;
+  letter-spacing: 0.8564rem;
+  line-height: 1.2102272472;
+  position: absolute;
+  text-transform: lowercase;
+  top: 39.4318rem;
+  white-space: nowrap;
+  width: 23.8rem;
+}
+.item--zbt {
+  font-family: M PLUS 1, "Source Sans Pro";
+  font-size: 8.1563rem;
+  font-weight: 700;
+  height: 11.8rem;
+  left: 3.4421rem;
+  letter-spacing: 0.6525rem;
+  line-height: 1.4479999177;
+  position: absolute;
+  text-transform: lowercase;
+  top: 14.9616rem;
+  white-space: nowrap;
+  width: 25.8rem;
+}
+.state-of-the-art-pieces-of-clothing-for-every-type-of-weather-fCE {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Source Code Pro, "Source Sans Pro";
+  font-size: 1.1895rem;
+  font-weight: 500;
+  height: 6rem;
+  left: 3.7383rem;
+  letter-spacing: 0.1665rem;
+  line-height: 1.7120000128;
+  position: absolute;
+  text-transform: uppercase;
+  top: 25.8774rem;
+  width: 21.7472rem;
+}
+.item--ScJ {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Source Code Pro, "Source Sans Pro";
+  font-size: 1.1895rem;
+  font-weight: 500;
+  height: 4rem;
+  left: 58.394rem;
+  letter-spacing: 0.1665rem;
+  line-height: 1.7120000128;
+  position: absolute;
+  text-transform: uppercase;
+  top: 49.2873rem;
+  width: 16.3105rem;
+}
+.spring-summer-2022-tUJ {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Source Code Pro, "Source Sans Pro";
+  font-size: 2.3789rem;
+  font-weight: 500;
+  height: 10.3rem;
+  left: 66.4702rem;
+  letter-spacing: 0.333rem;
+  line-height: 1.2569999808;
+  position: absolute;
+  text-transform: uppercase;
+  top: 16.5474rem;
+  width: 9rem;
+}
+.frame-2-mY6 {
+  align-items: center;
+  column-gap: 9.6006rem;
+  display: flex;
+  height: 1.4rem;
+  left: 32.2002rem;
+  position: absolute;
+  top: 5.3697rem;
+  width: 44.5018rem;
+}
+.shop-5Ht {
+  color: rgba(0, 0, 0, 0.75);
+  flex-shrink: 0;
+  font-family: Montserrat, "Source Sans Pro";
+  font-size: 1.1895rem;
+  font-weight: 600;
+  letter-spacing: 0.2082rem;
+  line-height: 1.2189999936;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.coats-nxz {
+  color: rgba(0, 0, 0, 0.75);
+  flex-shrink: 0;
+  font-family: Montserrat, "Source Sans Pro";
+  font-size: 1.1895rem;
+  font-weight: 600;
+  letter-spacing: 0.2082rem;
+  line-height: 1.2189999936;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.shoes-rxr {
+  color: rgba(0, 0, 0, 0.75);
+  flex-shrink: 0;
+  font-family: Montserrat, "Source Sans Pro";
+  font-size: 1.1895rem;
+  font-weight: 600;
+  letter-spacing: 0.2082rem;
+  line-height: 1.2189999936;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.tech-9wx {
+  color: #f1663a;
+  flex-shrink: 0;
+  font-family: Montserrat, "Source Sans Pro";
+  font-size: 1.1895rem;
+  font-weight: 700;
+  letter-spacing: 0.2082rem;
+  line-height: 1.2189999936;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+.frame-3-TSr {
+  background-color: #ffffff;
+  border-radius: 3.3984rem;
+  box-shadow: 0 0 3.3984rem rgba(0, 0, 0, 0.1299999952);
+  height: 6.1172rem;
+  left: 5.6924rem;
+  position: absolute;
+  top: 48.2677rem;
+  width: 18.7764rem;
+}
+.shop--aXU {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Montserrat, "Source Sans Pro";
+  font-size: 1.6992rem;
+  font-weight: 600;
+  height: 3.7687rem;
+  left: 1.8423rem;
+  letter-spacing: 0.2974rem;
+  line-height: 1.175;
+  position: absolute;
+  text-align: center;
+  text-transform: lowercase;
+  top: 1.1743rem;
+  width: 14.0722rem;
+}
+.shop--aXU-sub-0 {
+  color: #d7532a;
+  font-family: Montserrat, "Source Sans Pro";
+  font-size: 1.6992rem;
+  font-weight: 600;
+  letter-spacing: 0.2974rem;
+  line-height: 1.175;
+  text-transform: lowercase;
+}
+.shop--aXU-sub-1 {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Montserrat, "Source Sans Pro";
+  font-size: 1.1895rem;
+  font-weight: 600;
+  letter-spacing: 0.2974rem;
+  line-height: 1.6785714286;
+  text-transform: lowercase;
+}
+.feather-chevron-right-ZgE {
+  height: 2.2564rem;
+  left: 15.6478rem;
+  object-fit: contain;
+  position: absolute;
+  top: 1.9304rem;
+  vertical-align: top;
+  width: 1.1282rem;
 }

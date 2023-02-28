@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useProducts } from "../../../contexts/ProductContextProvider";
+import { Parallax } from "react-parallax";
+import "./AddProduct.css";
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -32,48 +34,82 @@ const AddProduct = () => {
   };
 
   return (
-    <div>
-      <h2>Add Product</h2>
-
-      <input type="text" placeholder="Name" name="name" onChange={handleInp} />
-      <br />
-      <input
-        type="text"
-        placeholder="Description"
-        name="description"
-        onChange={handleInp}
-      />
-      <br />
-      <input
-        type="number"
-        placeholder="Price"
-        name="price"
-        onChange={handleInp}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Image"
-        name="picture"
-        onChange={handleInp}
-      />
-      <br />
-      <input
-        type="text"
-        placeholder="Category"
-        name="type"
-        onChange={handleInp}
-      />
-      <br />
-      <button
-        onClick={() => {
-          addProduct(product);
-          navigate("/products");
-        }}
-      >
-        Save
-      </button>
-    </div>
+    <Parallax
+      bgImage="https://png.pngtree.com/thumb_back/fh260/background/20210809/pngtree-background-biru-keren-dan-kosong-abstract-untuk-template-desain-ppt-image_759974.jpg"
+      bgImageAlt="background image"
+      strength={150}
+      blur={1}
+      style={{ height: "92vh" }}
+    >
+      <div className="container">
+        <form id="contact" action="" method="post">
+          <h3>Add Product</h3>
+          <fieldset>
+            <input
+              type="text"
+              placeholder="Title"
+              name="name"
+              onChange={handleInp}
+              tabIndex="1"
+              required
+              autoFocus
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              type="text"
+              placeholder="Description"
+              name="description"
+              onChange={handleInp}
+              tabIndex="2"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              type="number"
+              placeholder="Price"
+              name="price"
+              onChange={handleInp}
+              tabIndex="3"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              type="text"
+              placeholder="Picture"
+              name="picture"
+              onChange={handleInp}
+              tabIndex="4"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              type="text"
+              placeholder="Type"
+              name="type"
+              onChange={handleInp}
+              tabIndex="5"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <button
+              name="submit"
+              type="submit"
+              onClick={() => {
+                addProduct(product);
+                navigate("/products");
+              }}
+            >
+              Save
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </Parallax>
   );
 };
 

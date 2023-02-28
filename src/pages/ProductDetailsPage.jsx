@@ -1,12 +1,12 @@
-import React from 'react'
-import ProductDetails from '../comnotents/products/ProductDetails/ProductDetails'
+import React from "react";
+import ProductDetails from "../comnotents/products/ProductDetails/ProductDetails";
 
 const ProductDetailsPage = () => {
   return (
     <>
-      <ProductDetails/>
+      <ProductDetails />
     </>
-  )
-}
+  );
+};
 
-export default ProductDetailsPage
+export default ProductDetailsPage;
